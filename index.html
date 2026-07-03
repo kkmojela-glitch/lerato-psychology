@@ -3,43 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lerato Psychology</title>
+    <title>Lerato Mathekga Psychology | Registered Clinical Psychologist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
     <style>
-        /* Base styles */
-        body { font-family: 'Montserrat', sans-serif; color: #222; margin: 0; padding: 0; }
-        .container { width: 85%; max-width: 1200px; margin: 0 auto; }
+        :root {
+            --bg-warm-white: #FAF9F6;       
+            --bg-sand: #F4F1EA;            
+            --primary-sage: #8F9E8B;        
+            --primary-sage-dark: #6E7C6A;  
+            --accent-green: #3D4E3A;       
+            --soft-blue: #E3ECF5;          
+            --text-dark: #232B28;          
+            --text-muted: #5A6561;        
+            --white: #FFFFFF;
+            --whatsapp-green: #25D366;
+            --font-main: 'Plus Jakarta Sans', sans-serif;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --shadow: 0 10px 30px rgba(35, 43, 40, 0.04);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-main); background-color: var(--bg-warm-white); color: var(--text-dark); line-height: 1.6; overflow-x: hidden; }
+        .section { padding: 100px 0; }
+        .container { width: 90%; max-width: 1140px; margin: 0 auto; }
+
+        /* Navigation */
+        .navbar { background-color: rgba(250, 249, 246, 0.95); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(143, 158, 139, 0.1); backdrop-filter: blur(12px); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--text-dark); text-decoration: none; }
+        .nav-links { display: flex; list-style: none; gap: 35px; }
         
-        /* Mobile Responsiveness Overhaul */
+        /* Mobile Responsive Overrides */
         @media (max-width: 768px) {
-            .container { width: 92%; padding: 0 4%; }
-            .nav-container { flex-direction: column; gap: 12px; text-align: center; }
-            .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; margin-bottom: 8px; }
-            .btn-book { width: 100%; justify-content: center; }
-            .hero { padding: 30px 0 60px 0; }
-            .hero-container { grid-template-columns: 1fr; gap: 30px; text-align: center; }
-            .hero h1 { font-size: 2.1rem; }
-            .hero p { margin: 0 auto 24px auto; }
-            .hero-buttons { flex-direction: column; gap: 12px; }
-            .btn-hero-primary, .btn-hero-secondary { width: 100%; justify-content: center; }
-            .hero-image-wrapper img { height: 300px; }
-            .floating-badges { grid-template-columns: 1fr; gap: 12px; margin-top: -30px; padding: 16px; }
-            .badge-item { border-right: none; border-bottom: 1px solid rgba(6, 47, 38, 0.08); padding-bottom: 10px; padding-right: 0; }
-            .badge-item:last-child { border-bottom: none; padding-bottom: 0; }
-            .section-header h2 { font-size: 1.7rem; }
-            .grid-cards { grid-template-columns: 1fr; gap: 20px; }
-            .card-img-holder img { height: 180px; }
-            .split-layout { grid-template-columns: 1fr; gap: 40px; }
-            .profile-side { flex-direction: column; text-align: center; }
-            .profile-pic img { width: 100%; max-width: 280px; height: 320px; margin: 0 auto; }
-            .footer-container { flex-direction: column; gap: 15px; text-align: center; }
-            .footer-socials { margin-top: 10px; }
+            .nav-links { display: none; }
+            .hero-container, .about-content, .contact-container, .services-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.2rem; }
+            .container { width: 92%; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to Lerato Psychology</h1>
-        <!-- Your original website content goes here -->
-    </div>
+    <!-- Paste the rest of your original body content here (from the backup) -->
+    <nav class="navbar">...</nav>
+    <!-- ... Rest of your original body code ... -->
+    <script>lucide.createIcons();</script>
 </body>
 </html>
