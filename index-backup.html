@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lerato Mathekga Psychology | Registered Clinical Psychologist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        :root {
+            --bg-warm-white: #FAF9F6;     
+            --bg-sand: #F4F1EA;           
+            --primary-sage: #8F9E8B;       
+            --primary-sage-dark: #6E7C6A;  
+            --accent-green: #3D4E3A;      
+            --soft-blue: #E3ECF5;         
+            --text-dark: #232B28;         
+            --text-muted: #5A6561;        
+            --white: #FFFFFF;
+            --whatsapp-green: #25D366;
+            --font-main: 'Plus Jakarta Sans', sans-serif;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --shadow: 0 10px 30px rgba(35, 43, 40, 0.04);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-main); background-color: var(--bg-warm-white); color: var(--text-dark); line-height: 1.6; overflow-x: hidden; }
+        .section { padding: 100px 0; }
+        .container { width: 90%; max-width: 1140px; margin: 0 auto; }
+
+        /* Navbar Layout */
+        .navbar { background-color: rgba(250, 249, 246, 0.95); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(143, 158, 139, 0.1); backdrop-filter: blur(12px); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+        .logo { font-size: 1.5rem; font-weight: 700; color: var(--text-dark); text-decoration: none; letter-spacing: -0.5px; }
+        .logo span { color: var(--primary-sage); }
+        .nav-links { display: flex; list-style: none; gap: 35px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-muted); font-weight: 500; transition: var(--transition); font-size: 1rem; }
+        .nav-links a:hover { color: var(--primary-sage); }
+
+        /* Buttons */
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 32px; font-weight: 600; border-radius: 50px; text-decoration: none; transition: var(--transition); cursor: pointer; font-size: 0.95rem; }
+        .btn-primary { background-color: var(--primary-sage); color: var(--white); border: none; }
+        .btn-primary:hover { background-color: var(--primary-sage-dark); transform: translateY(-2px); }
+        .btn-outline { background-color: transparent; color: var(--text-dark); border: 1.5px solid var(--primary-sage); }
+        .btn-outline:hover { background-color: var(--primary-sage); color: var(--white); }
+        .btn-whatsapp { background-color: var(--whatsapp-green); color: var(--white); gap: 10px; width: 100%; margin-top: 15px;}
+        .btn-whatsapp:hover { background-color: #20ba56; transform: translateY(-2px); }
+
+        /* Headers */
+        .section-header { text-align: center; max-width: 650px; margin: 0 auto 60px auto; }
+        .section-subtitle { display: block; color: var(--primary-sage); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 12px; }
+        .section-header h2 { font-size: 2.5rem; font-weight: 700; color: var(--text-dark); letter-spacing: -0.5px; }
+
+        /* Home Section */
+        .hero { background: linear-gradient(180deg, rgba(227, 236, 245, 0.4) 0%, var(--bg-warm-white) 100%); padding: 60px 0 80px 0; }
+        .hero-container { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; }
+        .badge { display: inline-block; background-color: var(--soft-blue); color: var(--accent-green); padding: 6px 18px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 25px; }
+        .hero h1 { font-size: 3.5rem; line-height: 1.15; margin-bottom: 20px; letter-spacing: -1px; }
+        .hero p { color: var(--text-muted); margin-bottom: 40px; font-size: 1.1rem; max-width: 520px; }
+        .hero-actions { display: flex; gap: 20px; margin-bottom: 45px; }
+        .hero-trust { display: flex; gap: 30px; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 30px; }
+        .trust-item { display: flex; align-items: center; gap: 10px; font-size: 0.95rem; color: var(--text-dark); font-weight: 500; }
+        .trust-item i { color: var(--primary-sage); }
+        .hero-image-container { position: relative; }
+        .hero-img { width: 100%; height: 540px; object-fit: cover; border-radius: 32px; box-shadow: 0 30px 60px rgba(35, 43, 40, 0.08); }
+
+        /* Accreditation Strip */
+        .accreditation-strip { background-color: var(--white); padding: 25px 0; border-top: 1px solid rgba(0,0,0,0.03); border-bottom: 1px solid rgba(0,0,0,0.03); }
+        .accreditation-container { display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; align-items: center; text-align: center; }
+        .acc-item { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: 0.9rem; color: var(--text-muted); opacity: 0.8; }
+        .acc-item i { color: var(--primary-sage); }
+
+        /* About Section */
+        .about { background-color: var(--bg-sand); }
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+        .about-text h2 { font-size: 2.5rem; margin-bottom: 20px; letter-spacing: -0.5px; }
+        .about-text p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 25px; }
+        blockquote { font-style: italic; color: var(--accent-green); border-left: 4px solid var(--primary-sage); padding: 18px 25px; background-color: rgba(255, 255, 255, 0.7); border-radius: 0 16px 16px 0; font-weight: 500; margin-bottom: 25px; line-height: 1.5; }
+
+        /* Practice Logistics Grid */
+        .logistics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 35px; }
+        .log-card { background: var(--white); padding: 20px; border-radius: 16px; box-shadow: var(--shadow); border: 1px solid rgba(143, 158, 139, 0.05); }
+        .log-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; color: var(--accent-green); text-transform: uppercase; letter-spacing: 0.5px; }
+        .log-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 0; }
+
+        /* Services Section */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .service-card { background-color: var(--white); padding: 45px 35px; border-radius: 24px; transition: var(--transition); border: 1px solid rgba(143, 158, 139, 0.06); box-shadow: var(--shadow); }
+        .service-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(143, 158, 139, 0.12); border-color: var(--primary-sage); }
+        .service-icon { width: 56px; height: 56px; background-color: var(--soft-blue); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 25px; color: var(--accent-green); }
+        .service-card h3 { margin-bottom: 15px; font-size: 1.4rem; letter-spacing: -0.3px; }
+        .service-card p { color: var(--text-muted); font-size: 1rem; }
+
+        /* Contact Section */
+        .contact { background-color: var(--bg-sand); }
+        .contact-container { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 80px; align-items: start; }
+        .contact-info h2 { font-size: 2.5rem; margin-bottom: 20px; letter-spacing: -0.5px; }
+        .contact-info p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 40px; }
+        .contact-details { display: flex; flex-direction: column; gap: 24px; margin-bottom: 40px; }
+        .contact-item { display: flex; align-items: center; gap: 20px; background: var(--white); padding: 20px; border-radius: 16px; box-shadow: var(--shadow); }
+        .contact-item i { color: var(--primary-sage); }
+        .contact-item span { font-weight: 500; }
+        .contact-form-container { background-color: var(--white); padding: 50px; border-radius: 32px; box-shadow: var(--shadow); border: 1px solid rgba(0,0,0,0.01); }
+        .contact-form-container h3 { margin-bottom: 30px; font-size: 1.6rem; letter-spacing: -0.3px; }
+        .form-group { margin-bottom: 24px; }
+        .form-group label { display: block; font-size: 0.85rem; font-weight: 700; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 16px; border: 1px solid rgba(0,0,0,0.05); background-color: var(--bg-warm-white); border-radius: 12px; font-family: var(--font-main); font-size: 1rem; outline: none; transition: var(--transition); }
+        .form-group textarea { resize: vertical; min-height: 110px; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--primary-sage); background-color: var(--white); box-shadow: 0 0 0 4px rgba(143, 158, 139, 0.15); }
+
+        .footer { background-color: var(--text-dark); color: var(--white); text-align: center; padding: 50px 0; font-size: 0.95rem; }
+        .footer p { opacity: 0.8; }
+
+        @media (max-width: 968px) {
+            .section { padding: 70px 0; }
+            .hero-container, .about-content, .contact-container { grid-template-columns: 1fr; gap: 40px; }
+            .hero-image-container { order: -1; }
+            .hero-img { height: 380px; }
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.6rem; }
+            .logistics-grid { grid-template-columns: 1fr; gap: 15px; }
+            .accreditation-container { gap: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Lerato Mathekga<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-outline" style="padding: 10px 24px;">Book Session</a>
+        </div>
+    </nav>
+
+    <header id="home" class="hero section">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="badge">Registered Clinical Psychologist</span>
+                <h1>Helping You Navigate Life with Confidence</h1>
+                <p>Professional psychological support in a safe, confidential, and compassionate environment. Every journey is unique, and I am here to help you take the next step toward emotional wellbeing.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Book a Consultation</a>
+                    <a href="#services" class="btn btn-outline">Explore Services</a>
+                </div>
+                <div class="hero-trust">
+                    <div class="trust-item"><i data-lucide="shield-check"></i> 100% Confidential</div>
+                    <div class="trust-item"><i data-lucide="award"></i> Evidence-Based Frameworks</div>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <img src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&w=800&q=80" alt="Black professional psychologist advising an interracial couple" class="hero-img">
+            </div>
+        </div>
+    </header>
+
+    <section class="accreditation-strip">
+        <div class="container accreditation-container">
+            <div class="acc-item"><i data-lucide="check-circle-2"></i> HPCSA Registered Practitioner</div>
+            <div class="acc-item"><i data-lucide="verified"></i> Board of Healthcare Funders (BHF)</div>
+            <div class="acc-item"><i data-lucide="heart-handshake"></i> Medical Aid Claims Accepted</div>
+        </div>
+    </section>
+
+    <section id="about" class="about section">
+        <div class="container about-content">
+            <div class="about-text">
+                <span class="section-subtitle">Welcome to the Practice</span>
+                <h2>About Lerato Mathekga</h2>
+                <p>At Lerato Mathekga Psychology, we believe that seeking support is a profound sign of strength. My approach balances deep clinical empathy with actionable, evidence-based therapeutic tools tailored to fit the realities of your individual journey.</p>
+                
+                <blockquote>
+                    "Providing a structured, compassionate, and non-judgmental space to unpack challenges, heal from transitions, and cultivate long-term mental resilience."
+                </blockquote>
+
+                <div class="logistics-grid">
+                    <div class="log-card">
+                        <h4>Consultations</h4>
+                        <p>In-Person Sessions & Secure Online Video Therapy.</p>
+                    </div>
+                    <div class="log-card">
+                        <h4>Rates & Claims</h4>
+                        <p>Medical Aid alignment or competitive private cash rates.</p>
+                    </div>
+                    <div class="log-card">
+                        <h4>Languages</h4>
+                        <p>Proudly practicing in English, Sesotho, & IsiZulu.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-graphic">
+                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Calm office background" style="width:100%; height:450px; object-fit:cover; border-radius:24px; box-shadow: var(--shadow);">
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Areas of Practice</span>
+                <h2>Specialized Therapeutic Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="user"></i></div>
+                    <h3>Individual Therapy</h3>
+                    <p>Navigating personal hurdles, self-discovery, and personal development in a dedicated, one-on-one space.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="users"></i></div>
+                    <h3>Couples Counselling</h3>
+                    <p>Improving communication, resolving underlying conflict, and rebuilding deep connection between partners.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i data-lucide="brain"></i></div>
+                    <h3>Stress & Anxiety Support</h3>
+                    <p>Practical cognitive tools and therapeutic insights to step away from chronic stress and find regular balance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact section">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <h2>Let's Start the Conversation</h2>
+                <p>Reaching out can feel daunting, but you don't have to navigate it alone. Use the details below or complete the brief form to book a slot.</p>
+                <div class="contact-details">
+                    <div class="contact-item"><i data-lucide="phone"></i><span>083 214 2695 (Practice Desk)</span></div>
+                    <div class="contact-item"><i data-lucide="mail"></i><span>k.kmojela@gmail.com</span></div>
+                    <div class="contact-item"><i data-lucide="map-pin"></i><span>Johannesburg, Gauteng</span></div>
+                </div>
+                <a href="https://wa.me/27832142695" class="btn btn-whatsapp" target="_blank"><i data-lucide="message-circle"></i> Chat via WhatsApp</a>
+            </div>
+            <div class="contact-form-container">
+                <h3>Request an Appointment</h3>
+                <form onsubmit="event.preventDefault(); alert('Demo Form Submitted Successfully!');">
+                    <div class="form-group"><label>Your Full Name</label><input type="text" placeholder="e.g. Thabo Molefe" required></div>
+                    <div class="form-group"><label>Email Address</label><input type="email" placeholder="e.g. thabo@example.com" required></div>
+                    <div class="form-group"><label>Preferred Service Focus</label>
+                        <select>
+                            <option>Individual Therapy</option>
+                            <option>Couples Counselling</option>
+                            <option>Stress & Anxiety Support</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><label>Brief Message / Inquiry</label><textarea placeholder="How can I assist you? (Optional)"></textarea></div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container"><p>&copy; 2026 Lerato Mathekga Psychology. Built by Tech Nexus Studio.</p></div>
+    </footer>>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
