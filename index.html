@@ -1,56 +1,496 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lerato Mathekga Psychology | Registered Clinical Psychologist</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lerato Mathekga | Clinical Psychologist</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <style>
-        :root {
-            --bg-warm-white: #FAF9F6;       
-            --bg-sand: #F4F1EA;            
-            --primary-sage: #8F9E8B;        
-            --primary-sage-dark: #6E7C6A;  
-            --accent-green: #3D4E3A;       
-            --soft-blue: #E3ECF5;          
-            --text-dark: #232B28;          
-            --text-muted: #5A6561;        
-            --white: #FFFFFF;
-            --whatsapp-green: #25D366;
-            --font-main: 'Plus Jakarta Sans', sans-serif;
-            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            --shadow: 0 10px 30px rgba(35, 43, 40, 0.04);
-        }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: var(--font-main); background-color: var(--bg-warm-white); color: var(--text-dark); line-height: 1.6; overflow-x: hidden; }
-        .section { padding: 100px 0; }
-        .container { width: 90%; max-width: 1140px; margin: 0 auto; }
-
-        /* Navigation */
-        .navbar { background-color: rgba(250, 249, 246, 0.95); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(143, 158, 139, 0.1); backdrop-filter: blur(12px); }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
-        .logo { font-size: 1.5rem; font-weight: 700; color: var(--text-dark); text-decoration: none; }
-        .nav-links { display: flex; list-style: none; gap: 35px; }
-        
-        /* Mobile Responsive Overrides */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero-container, .about-content, .contact-container, .services-grid { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2.2rem; }
-            .container { width: 92%; }
-        }
-    </style>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <!-- Paste the rest of your original body content here (from the backup) -->
-    <nav class="navbar">...</nav>
-    <!-- ... Rest of your original body code ... -->
-    <script>lucide.createIcons();</script>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav id="navbar">
+        <div class="container nav-inner">
+            <a href="#" class="logo">Lerato Mathekga <span>| Psychologist</span></a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact" class="nav-cta">Book Session</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div class="hero-image">
+                <img src="images/lerato.png" alt="Lerato Mathekga - Clinical Psychologist" />
+            </div>
+            <div class="hero-content">
+                <div class="hero-badge">✦ HPCSA Registered</div>
+                <h1>Lerato Mathekga</h1>
+                <p class="subtitle">REGISTERED CLINICAL PSYCHOLOGIST</p>
+                <p class="description">
+                    Helping You Navigate Life with Confidence<br />
+                    Professional psychological support in a safe, confidential, and compassionate environment. Every journey is unique, and I am here to help you take the next step toward emotional wellbeing.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Book a Consultation</a>
+                    <a href="#services" class="btn btn-outline">Explore Services →</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stats-item">
+                        <i data-lucide="shield-check"></i> 100% Confidential
+                    </div>
+                    <div class="hero-stats-item">
+                        <i data-lucide="clipboard-check"></i> Evidence-Based Frameworks
+                    </div>
+                    <div class="hero-stats-item">
+                        <i data-lucide="stethoscope"></i> HPCSA Registered
+                    </div>
+                    <div class="hero-stats-item">
+                        <i data-lucide="credit-card"></i> Medical Aid Accepted
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section-padding" id="about" style="background:var(--bg-white);">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-badge">Welcome to the Practice</span>
+                <h2 class="section-title">About <span>Lerato Mathekga</span></h2>
+                <p class="section-subtitle mx-auto" style="max-width:700px;">
+                    At Lerato Mathekga Psychology, we believe that seeking support is a profound sign of strength. My approach balances deep clinical empathy with actionable, evidence-based therapeutic tools tailored to fit the realities of your individual journey.
+                </p>
+            </div>
+            <div style="max-width:800px;margin:32px auto 0;">
+                <div class="quote" style="text-align:center;border-left:none;padding:24px 0;">
+                    "Providing a structured, compassionate, and non-judgmental space to unpack challenges, heal from transitions, and cultivate long-term mental resilience."
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY WORK WITH ME ===== -->
+    <section class="section-padding" style="background:var(--bg-cream);">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-badge">Why Work With Me</span>
+                <h2 class="section-title">Professional & <span>Compassionate</span></h2>
+                <p class="section-subtitle mx-auto">
+                    Here's what you can expect when you choose to work with me.
+                </p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="icon"><i data-lucide="badge-check"></i></div>
+                    <h4>Professional & Experienced</h4>
+                    <p>Registered with HPCSA and committed to ongoing professional development.</p>
+                </div>
+                <div class="why-card">
+                    <div class="icon"><i data-lucide="heart-handshake"></i></div>
+                    <h4>Safe & Supportive Space</h4>
+                    <p>A confidential, non-judgmental environment where you can be heard.</p>
+                </div>
+                <div class="why-card">
+                    <div class="icon"><i data-lucide="clipboard-check"></i></div>
+                    <h4>Evidence-Based Approach</h4>
+                    <p>Using proven therapeutic methods tailored to your unique needs.</p>
+                </div>
+                <div class="why-card">
+                    <div class="icon"><i data-lucide="globe"></i></div>
+                    <h4>Cultural Sensitivity</h4>
+                    <p>Inclusive care that respects your background, values, and lived experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="section-padding" id="services" style="background:var(--bg-white);">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-badge">Areas of Practice</span>
+                <h2 class="section-title">Comprehensive <span>Psychological Services</span></h2>
+                <p class="section-subtitle mx-auto">
+                    Specialized therapeutic services tailored to your unique needs and journey.
+                </p>
+            </div>
+            <div class="services-grid" style="margin-top:44px;">
+                <div class="service-card">
+                    <div class="icon"><i data-lucide="user"></i></div>
+                    <h3>Individual Therapy</h3>
+                    <p>One-on-one support for personal challenges, self-discovery, and emotional growth.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i data-lucide="heart"></i></div>
+                    <h3>Couples Counselling</h3>
+                    <p>Strengthen communication, resolve conflict, and build a healthier, more connected relationship.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i data-lucide="brain"></i></div>
+                    <h3>Stress & Anxiety Support</h3>
+                    <p>Evidence-based strategies to manage stress, reduce anxiety, and restore balance.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i data-lucide="users-round"></i></div>
+                    <h3>Family Therapy</h3>
+                    <p>Improve family dynamics and create a supportive environment for healing and growth.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i data-lucide="shield"></i></div>
+                    <h3>Trauma & Recovery</h3>
+                    <p>Compassionate care to heal from past trauma and build long-term resilience.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i data-lucide="baby"></i></div>
+                    <h3>Child & Adolescent Therapy</h3>
+                    <p>Supporting young minds through developmental challenges, emotional regulation, and building resilience.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i data-lucide="cloud-rain"></i></div>
+                    <h3>Depression Therapy</h3>
+                    <p>Compassionate support to understand and overcome depressive symptoms and find hope again.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i data-lucide="heart-crack"></i></div>
+                    <h3>Grief Counselling</h3>
+                    <p>Navigating loss and bereavement with compassionate guidance and emotional support.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i data-lucide="activity"></i></div>
+                    <h3>Stress Management</h3>
+                    <p>Developing healthy coping strategies and building resilience against life's pressures.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i data-lucide="sparkles"></i></div>
+                    <h3>Self-Esteem Building</h3>
+                    <p>Strengthening self-worth, confidence, and cultivating a positive self-identity.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i data-lucide="handshake"></i></div>
+                    <h3>Relationship Counselling</h3>
+                    <p>Improving relationship patterns, communication skills, and emotional intimacy.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i data-lucide="refresh-cw"></i></div>
+                    <h3>Life Transitions</h3>
+                    <p>Navigating major life changes including career shifts, relocation, and personal transformation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="section-padding" id="gallery" style="background:var(--bg-cream);">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-badge">Gallery</span>
+                <h2 class="section-title">Therapy <span>Space</span></h2>
+                <p class="section-subtitle mx-auto">
+                    A calm and welcoming environment designed for comfort and healing.
+                </p>
+            </div>
+            <div class="gallery-grid" style="margin-top:40px;">
+                <img src="images/therapy1.jpg" alt="Therapy space 1" />
+                <img src="images/therapy2.png" alt="Therapy space 2" />
+                <img src="images/therapy3.png" alt="Therapy space 3" />
+                <img src="images/therapy4.jpg" alt="Therapy space 4" />
+                <img src="images/therapy5.jpg" alt="Therapy space 5" class="span-2" />
+                <img src="images/therapy6.jpg" alt="Therapy space 6" />
+                <img src="images/therapy7.jpg" alt="Therapy space 7" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="section-padding" id="testimonials" style="background:var(--bg-white);">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-badge">Testimonials</span>
+                <h2 class="section-title">What Clients <span>Say</span></h2>
+                <p class="section-subtitle mx-auto">
+                    Real experiences from people who have found healing and growth.
+                </p>
+            </div>
+            <div class="testimonials-grid" style="margin-top:44px;">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <blockquote>"Lerato creates a space where you feel truly heard. His approach is both compassionate and practical. I've grown more in the past few months than I have in years."</blockquote>
+                    <div class="client">
+                        <div class="avatar">TM</div>
+                        <div>
+                            <div class="name">T. Mokoena</div>
+                            <div class="role">Individual Therapy Client</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <blockquote>"Couples counselling with Lerato saved our relationship. He helped us break old patterns and communicate in ways we never thought possible."</blockquote>
+                    <div class="client">
+                        <div class="avatar">LN</div>
+                        <div>
+                            <div class="name">L. &amp; N.</div>
+                            <div class="role">Couples Counselling</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <blockquote>"I was hesitant to start therapy, but Lerato made me feel safe from the very first session. His guidance through my anxiety has been life-changing."</blockquote>
+                    <div class="client">
+                        <div class="avatar">SN</div>
+                        <div>
+                            <div class="name">S. Ndlovu</div>
+                            <div class="role">Anxiety Support Client</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section-padding" id="faq" style="background:var(--bg-cream);">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-badge">FAQ</span>
+                <h2 class="section-title">Frequently Asked <span>Questions</span></h2>
+                <p class="section-subtitle mx-auto">
+                    Common questions about therapy, sessions, and what to expect.
+                </p>
+            </div>
+            <div class="faq-list" style="margin-top:40px;">
+                <div class="faq-item active">
+                    <button class="faq-question">
+                        What should I expect during my first session?
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Your first session is an opportunity for us to get to know each other. We'll discuss what brought you to therapy, your goals, and how we can work together. It's a safe space to ask questions and decide if we're a good fit.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you accept medical aid / insurance?
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, I work with most major medical aid schemes. Please contact me with your specific plan details and I'll confirm coverage. I also offer competitive private cash rates.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How long does therapy typically last?
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Every journey is unique. Some clients benefit from short-term therapy (6–12 sessions), while others prefer longer-term work. We'll discuss your needs and regularly review your progress together.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Do you offer online therapy sessions?
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. Secure video therapy is available for clients who prefer the convenience or cannot attend in person. The same compassionate care, delivered virtually.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Is therapy confidential?
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, confidentiality is a cornerstone of ethical therapy. Everything you share is protected by professional ethics and legal requirements, with the standard exceptions for safety.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section-padding" id="contact" style="background:var(--bg-white);">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-badge">Get in Touch</span>
+                <h2 class="section-title">Let's Start the <span>Conversation</span></h2>
+                <p class="section-subtitle mx-auto">
+                    Reaching out can feel daunting, but you don't have to navigate it alone. 
+                    Use the details below or complete the brief form to book a slot.
+                </p>
+            </div>
+            <div class="contact-grid" style="margin-top:44px;">
+                <div>
+                    <div class="contact-info-item">
+                        <i data-lucide="phone"></i>
+                        <div>
+                            <strong>Practice Desk</strong>
+                            <span>083 214 2695</span>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i data-lucide="mail"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <span>k.kmojela@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i data-lucide="map-pin"></i>
+                        <div>
+                            <strong>Location</strong>
+                            <span>Johannesburg, Gauteng</span>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i data-lucide="clock"></i>
+                        <div>
+                            <strong>Consultation Hours</strong>
+                            <span>Mon–Fri: 8:00 AM – 7:00 PM</span>
+                        </div>
+                    </div>
+                    <div style="margin-top:24px;">
+                        <a href="#" class="btn btn-primary" style="width:100%;justify-content:center;">
+                            <i data-lucide="message-circle"></i> Chat via WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Full Name</label>
+                            <input type="text" id="name" placeholder="e.g. Thabo Mokoena" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="e.g. thabo@email.com" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Preferred Service Focus</label>
+                            <select id="service">
+                                <option value="">Select a service...</option>
+                                <option>Individual Therapy</option>
+                                <option>Couples Counselling</option>
+                                <option>Family Therapy</option>
+                                <option>Child &amp; Adolescent Therapy</option>
+                                <option>Trauma Therapy</option>
+                                <option>Anxiety Treatment</option>
+                                <option>Depression Therapy</option>
+                                <option>Grief Counselling</option>
+                                <option>Stress Management</option>
+                                <option>Life Transitions</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Brief Message / Inquiry</label>
+                            <textarea id="message" placeholder="Tell me a little about what you'd like to discuss..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+                            <i data-lucide="send"></i> Request an Appointment
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <a href="#" class="footer-logo">Lerato Mathekga <span>| Psychologist</span></a>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Lerato Mathekga Psychology. All Rights Reserved.<br />
+<small style="font-size:0.7rem;opacity:0.6;">Designed by Mojela Labs</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== WHATSAPP FLOAT ===== -->
+    <a href="#" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i data-lucide="message-circle"></i>
+    </a>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        lucide.createIcons();
+
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+            });
+        });
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('active');
+                });
+
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your inquiry! Lerato will respond within 24 hours. 🙏');
+            e.target.reset();
+        });
+
+        document.querySelector('.whatsapp-float').href = 'https://wa.me/27832142695';
+        document.querySelector('.contact-info-item .btn-primary').href = 'https://wa.me/27832142695';
+    </script>
 </body>
 </html>
+
