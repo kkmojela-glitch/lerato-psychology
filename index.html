@@ -1,631 +1,122 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lerato Mathekga | Registered Clinical Psychologist</title>
-    <!-- Premium Google Fonts & FontAwesome Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --primary-deep: #062F26;
-            --primary-accent: #0A4337;
-            --text-dark: #1B2523;
-            --text-muted: #566562;
-            --bg-cream: #FAFBF9;
-            --white: #FFFFFF;
-            --font-heading: 'Cinzel', serif;
-            --font-body: 'Plus Jakarta Sans', sans-serif;
-            --shadow-lux: 0 12px 35px rgba(6, 47, 38, 0.05);
+/* Complete Mobile Responsiveness Overhaul */
+        @media (max-width: 768px) {
+            .container {
+                width: 92%;
+                padding: 0 4%;
+            }
+
+            /* Responsive Navbar */
+            .nav-container {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-bottom: 8px;
+            }
+
+            .btn-book {
+                width: 100%;
+                justify-content: center;
+            }
+
+            /* Hero Section Stack */
+            .hero {
+                padding: 30px 0 60px 0;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.1rem;
+            }
+
+            .hero p {
+                margin: 0 auto 24px auto;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .btn-hero-primary, .btn-hero-secondary {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-image-wrapper img {
+                height: 300px;
+            }
+
+            /* Trust Ribbon Badges Stack */
+            .floating-badges {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                margin-top: -30px;
+                padding: 16px;
+            }
+
+            .badge-item {
+                border-right: none;
+                border-bottom: 1px solid rgba(6, 47, 38, 0.08);
+                padding-bottom: 10px;
+                padding-right: 0;
+            }
+
+            .badge-item:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            /* Practice Cards Grid Stack */
+            .section-header h2 {
+                font-size: 1.7rem;
+            }
+
+            .grid-cards {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .card-img-holder img {
+                height: 180px;
+            }
+
+            /* Profile & Contact Layout Split */
+            .split-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .profile-side {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-pic img {
+                width: 100%;
+                max-width: 280px;
+                height: 320px;
+                margin: 0 auto;
+            }
+
+            /* Footer Alignment */
+            .footer-container {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .footer-socials {
+                margin-top: 10px;
+            }
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font-body);
-            background-color: var(--bg-cream);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1240px;
-            margin: 0 auto;
-        }
-
-        /* Luxury Header Navigation */
-        .navbar {
-            background: var(--white);
-            border-bottom: 1px solid rgba(6, 47, 38, 0.06);
-            padding: 12px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .brand-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .brand-wrapper i {
-            font-size: 1.8rem;
-            color: var(--primary-deep);
-        }
-
-        .logo-text h2 {
-            font-family: var(--font-heading);
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--primary-deep);
-            line-height: 1.1;
-        }
-
-        .logo-text span {
-            font-size: 0.65rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--text-muted);
-            display: block;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 32px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-accent);
-        }
-
-        .btn-book {
-            background-color: var(--primary-deep);
-            color: var(--white);
-            padding: 10px 20px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.85rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: background 0.3s;
-        }
-
-        .btn-book:hover {
-            background-color: var(--primary-accent);
-        }
-
-        /* Editorial Hero Layout */
-        .hero {
-            padding: 60px 0 90px 0;
-            background: linear-gradient(180deg, #EBF2F0 0%, var(--bg-cream) 100%);
-        }
-
-        .hero-container {
-            display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .hero-subtitle {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--text-muted);
-            font-weight: 600;
-            margin-bottom: 14px;
-            display: block;
-        }
-
-        .hero h1 {
-            font-family: var(--font-heading);
-            font-size: 3.2rem;
-            color: var(--primary-deep);
-            line-height: 1.15;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            margin-bottom: 32px;
-            max-width: 540px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 16px;
-        }
-
-        .btn-hero-primary {
-            background-color: var(--primary-deep);
-            color: var(--white);
-            padding: 14px 26px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-hero-secondary {
-            border: 1px solid var(--primary-deep);
-            color: var(--primary-deep);
-            padding: 14px 26px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        /* Lock the Hero Image Proportions exactly like the picture */
-        .hero-image-wrapper img {
-            width: 100%;
-            height: 440px;
-            object-fit: cover;
-            border-radius: 6px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
-        }
-
-        /* Floating Trust Ribbon Layout */
-        .floating-badges {
-            background: var(--white);
-            border-radius: 6px;
-            padding: 22px;
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 15px;
-            box-shadow: var(--shadow-lux);
-            margin-top: -45px;
-            position: relative;
-            z-index: 10;
-            border: 1px solid rgba(6, 47, 38, 0.04);
-        }
-
-        .badge-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--text-dark);
-            border-right: 1px solid rgba(6, 47, 38, 0.1);
-            padding-right: 8px;
-        }
-
-        .badge-item:last-child { border-right: none; }
-        .badge-item i { color: var(--primary-deep); font-size: 1.1rem; }
-
-        /* Practice Cards Section Grid Layout */
-        .section-header {
-            text-align: center;
-            margin: 75px 0 45px 0;
-        }
-
-        .section-header span {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--text-muted);
-            display: block;
-            margin-bottom: 6px;
-        }
-
-        .section-header h2 {
-            font-family: var(--font-heading);
-            font-size: 2.1rem;
-            color: var(--primary-deep);
-        }
-
-        .grid-cards {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 18px;
-            margin-bottom: 70px;
-        }
-
-        .card-premium {
-            background: var(--white);
-            border-radius: 6px;
-            border: 1px solid rgba(6, 47, 38, 0.05);
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .card-premium:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lux);
-        }
-
-        /* Keep service card images small and elegant */
-        .card-img-holder img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-        }
-
-        .card-content {
-            padding: 20px;
-            position: relative;
-        }
-
-        .card-icon-floating {
-            width: 32px;
-            height: 32px;
-            background: var(--primary-deep);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.85rem;
-            position: absolute;
-            top: -16px;
-            left: 20px;
-        }
-
-        .card-content h3 {
-            font-family: var(--font-heading);
-            font-size: 1.05rem;
-            color: var(--primary-deep);
-            margin: 8px 0 6px 0;
-        }
-
-        .card-content p {
-            color: var(--text-muted);
-            font-size: 0.8rem;
-            line-height: 1.4;
-        }
-
-        /* Balanced Split Section Base */
-        .split-layout {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 50px;
-            margin-top: 50px;
-            align-items: start;
-            padding-bottom: 60px;
-        }
-
-        .profile-side {
-            display: flex;
-            gap: 25px;
-        }
-
-        .profile-pic img {
-            width: 170px;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 6px;
-        }
-
-        .profile-bio span {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-        }
-
-        .profile-bio h3 {
-            font-family: var(--font-heading);
-            font-size: 1.7rem;
-            color: var(--primary-deep);
-            margin-bottom: 10px;
-        }
-
-        .profile-bio p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-bottom: 15px;
-        }
-
-        .features-list {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-            margin-top: 15px;
-        }
-
-        .feature-row {
-            display: flex;
-            gap: 12px;
-        }
-
-        .feature-row i { color: var(--primary-deep); margin-top: 3px; font-size: 1.1rem; }
-        .feature-row h4 { font-size: 0.85rem; color: var(--text-dark); }
-        .feature-row p { font-size: 0.75rem; color: var(--text-muted); }
-
-        /* Input Form & Info Architecture */
-        .form-side h3 {
-            font-family: var(--font-heading);
-            font-size: 1.5rem;
-            color: var(--primary-deep);
-            margin-bottom: 15px;
-        }
-
-        .contact-quick-links {
-            margin-bottom: 20px;
-            font-size: 0.85rem;
-        }
-
-        .quick-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 6px;
-            color: var(--text-muted);
-        }
-
-        .quick-item i { color: var(--primary-deep); }
-
-        .premium-input {
-            width: 100%;
-            padding: 11px;
-            border: 1px solid rgba(6, 47, 38, 0.15);
-            border-radius: 4px;
-            background: var(--white);
-            font-family: var(--font-body);
-            font-size: 0.85rem;
-            margin-bottom: 12px;
-            outline: none;
-        }
-
-        .premium-input:focus {
-            border-color: var(--primary-deep);
-        }
-
-        .btn-submit {
-            width: 100%;
-            background: var(--primary-deep);
-            color: var(--white);
-            border: none;
-            padding: 12px;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 0.85rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        /* High-End Agency Footer Design */
-        .footer-lux {
-            background: #031A15;
-            color: rgba(255, 255, 255, 0.65);
-            padding: 25px 0;
-            font-size: 0.8rem;
-        }
-
-        .footer-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .tech-nexus-brand {
-            font-weight: 500;
-        }
-
-        .tech-nexus-brand span {
-            color: var(--white);
-            font-weight: 700;
-        }
-
-        .footer-socials a {
-            color: rgba(255, 255, 255, 0.65);
-            margin-left: 14px;
-            font-size: 0.95rem;
-        }
-
-        @media(max-width: 1024px) {
-            .hero-container, .split-layout, .grid-cards, .floating-badges { grid-template-columns: 1fr; }
-            .profile-side { flex-direction: column; }
-        }
-    </style>
-</head>
-<body>
-
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="brand-wrapper">
-                <i class="fa-solid fa-brain"></i>
-                <div class="logo-text">
-                    <h2>Lerato Mathekga</h2>
-                    <span>Registered Clinical Psychologist</span>
-                </div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#resources">Resources</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a href="#contact" class="btn-book"><i class="fa-regular fa-calendar-check"></i> Book Session</a>
-        </div>
-    </nav>
-
-    <header class="hero">
-        <div class="container hero-container">
-            <div class="hero-text-side">
-                <span class="hero-subtitle">Registered Clinical Psychologist</span>
-                <h1>Helping You Navigate Life with Confidence</h1>
-                <p>Professional psychological support in a safe, confidential, and compassionate environment. Every journey is unique, and I am here to help you take the next step toward emotional wellbeing.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn-hero-primary"><i class="fa-regular fa-calendar"></i> Book a Consultation</a>
-                    <a href="#services" class="btn-hero-secondary">Explore Services &rarr;</a>
-                </div>
-            </div>
-            <div class="hero-image-wrapper">
-                <img src="images/lerato.png" alt="Lerato Mathekga">
-            </div>
-        </div>
-    </header>
-
-    <div class="container">
-        <div class="floating-badges">
-            <div class="badge-item"><i class="fa-solid fa-lock"></i> 100% Confidential</div>
-            <div class="badge-item"><i class="fa-solid fa-brain"></i> Evidence-Based Frameworks</div>
-            <div class="badge-item"><i class="fa-solid fa-user-shield"></i> HPCSA Registered Practitioner</div>
-            <div class="badge-item"><i class="fa-solid fa-globe"></i> Board of Healthcare Funders (BHF)</div>
-            <div class="badge-item"><i class="fa-solid fa-credit-card"></i> Medical Aid Claims Accepted</div>
-        </div>
-    </div>
-
-    <section id="services">
-        <div class="container">
-            <div class="section-header">
-                <span>Areas of Practice</span>
-                <h2>Comprehensive Psychological Services</h2>
-            </div>
-            
-            <div class="grid-cards">
-                <div class="card-premium">
-                    <div class="card-img-holder"><img src="images/therapy1.jpg" alt="Individual Therapy"></div>
-                    <div class="card-content">
-                        <div class="card-icon-floating"><i class="fa-solid fa-user"></i></div>
-                        <h3>Individual Therapy</h3>
-                        <p>One-on-one support for personal challenges, self-discovery, and emotional growth.</p>
-                    </div>
-                </div>
-                <div class="card-premium">
-                    <div class="card-img-holder"><img src="images/therapy2.png" alt="Couples Counselling"></div>
-                    <div class="card-content">
-                        <div class="card-icon-floating"><i class="fa-solid fa-users"></i></div>
-                        <h3>Couples Counselling</h3>
-                        <p>Strengthen communication, resolve conflict, and build a healthier, more connected relationship.</p>
-                    </div>
-                </div>
-                <div class="card-premium">
-                    <div class="card-img-holder"><img src="images/therapy3.png" alt="Stress & Anxiety Support"></div>
-                    <div class="card-content">
-                        <div class="card-icon-floating"><i class="fa-solid fa-seedling"></i></div>
-                        <h3>Stress & Anxiety Support</h3>
-                        <p>Evidence-based strategies to manage stress, reduce anxiety, and restore balance.</p>
-                    </div>
-                </div>
-                <div class="card-premium">
-                    <div class="card-img-holder"><img src="images/therapy4.jpg" alt="Family Therapy"></div>
-                    <div class="card-content">
-                        <div class="card-icon-floating"><i class="fa-solid fa-house-user"></i></div>
-                        <h3>Family Therapy</h3>
-                        <p>Improve family dynamics and create a supportive environment for healing and growth.</p>
-                    </div>
-                </div>
-                <div class="card-premium">
-                    <div class="card-img-holder"><img src="images/therapy5.jpg" alt="Trauma & Recovery"></div>
-                    <div class="card-content">
-                        <div class="card-icon-floating"><i class="fa-solid fa-heart-pulse"></i></div>
-                        <h3>Trauma & Recovery</h3>
-                        <p>Compassionate care to heal from past trauma and build long-term resilience.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="container">
-        <div class="split-layout">
-            
-            <div class="profile-side">
-                <div class="profile-pic">
-                    <img src="images/therapy7.jpg" alt="Lerato Mathekga Portrait">
-                </div>
-                <div class="profile-bio">
-                    <span>Welcome to the Practice</span>
-                    <h3>About Lerato Mathekga</h3>
-                    <p>At Lerato Mathekga Psychology, we believe that seeking support is a profound sign of strength. My approach balances deep empathy with actionable, evidence-based therapeutic tools tailored to fit the realities of your individual journey.</p>
-                    <p style="font-style: italic; border-left: 2px solid var(--primary-deep); padding-left: 10px; font-size: 0.8rem; color: var(--text-muted);">"Providing a structured, compassionate, and non-judgmental space to unpack challenges, heal from transitions, and cultivate long-term mental resilience."</p>
-                    
-                    <div class="features-list">
-                        <div class="feature-row">
-                            <i class="fa-regular fa-id-card"></i>
-                            <div>
-                                <h4>Professional & Experienced</h4>
-                                <p>Registered with HPCSA and committed to ongoing professional development.</p>
-                            </div>
-                        </div>
-                        <div class="feature-row">
-                            <i class="fa-regular fa-heart"></i>
-                            <div>
-                                <h4>Safe & Supportive Space</h4>
-                                <p>A confidential, non-judgmental environment where you can be heard.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="contact" class="form-side">
-                <h3>Let's Start the Conversation</h3>
-                <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 14px;">Reaching out can feel daunting, but you don't have to navigate it alone. Use the details below or complete the form to book a slot.</p>
-                
-                <div class="contact-quick-links">
-                    <div class="quick-item"><i class="fa-solid fa-phone"></i> 083 214 2695 (Practice Desk)</div>
-                    <div class="quick-item"><i class="fa-solid fa-envelope"></i> k.kmojela@gmail.com</div>
-                    <div class="quick-item"><i class="fa-solid fa-location-dot"></i> Johannesburg, Gauteng</div>
-                    <div class="quick-item"><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/27832142695" target="_blank" style="color:var(--primary-accent); text-decoration:none; font-weight:600;">Chat via WhatsApp</a></div>
-                </div>
-
-                <form action="#" method="POST">
-                    <input type="text" class="premium-input" placeholder="Your Full Name" required>
-                    <input type="email" class="premium-input" placeholder="Email Address" required>
-                    <select class="premium-input">
-                        <option>Preferred Service Focus</option>
-                        <option>Individual Therapy</option>
-                        <option>Couples Counselling</option>
-                        <option>Stress & Anxiety Support</option>
-                    </select>
-                    <textarea class="premium-input" rows="2" placeholder="Brief Message / Inquiry"></textarea>
-                    <button type="submit" class="btn-submit"><i class="fa-regular fa-paper-plane"></i> Request an Appointment</button>
-                </form>
-            </div>
-
-        </div>
-    </section>
-
-    <footer class="footer-lux">
-        <div class="container footer-container">
-            <p>&copy; 2026 Lerato Mathekga Psychology. All Rights Reserved.</p>
-            <p class="tech-nexus-brand">Created by <span>Tech Nexus</span></p>
-            <div class="footer-socials">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
