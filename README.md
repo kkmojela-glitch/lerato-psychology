@@ -6,8 +6,8 @@ A modern, responsive website built for a psychology practice. The website is des
 
 - Responsive design for desktop, tablet, and mobile
 - Modern and clean user interface
-- Services section
 - About section
+- Services section
 - Testimonials
 - Contact information
 - Request Appointment section
@@ -21,18 +21,19 @@ A modern, responsive website built for a psychology practice. The website is des
 
 ## Project Structure
 
-```
+```text
 lerato-psychology/
-│── css/
-│── images/
-│── js/
-│── index.html
-│── README.md
+├── css/
+├── images/
+├── js/
+├── index.html
+└── README.md
 ```
 
 ## Live Demo
 
 GitHub Pages:
+
 https://kkmojela-glitch.github.io/lerato-psychology/
 
 ## Author
